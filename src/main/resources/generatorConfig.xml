@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <classPathEntry location="D:/progarm/mysql-connector-java-5.1.45.jar" />
+    <classPathEntry location="D:/progarm/mysql-connector-java-5.1.34.jar" />
     <context id="test" targetRuntime="MyBatis3">
         <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"></plugin>
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
@@ -17,7 +17,7 @@
         </commentGenerator>
         <!--数据库链接URL，用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://10.200.110.4:3306/loan_data" userId="loan_user" password="loan_user#0820">
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/order" userId="root" password="123456">
         </jdbcConnection>
         <javaTypeResolver>
             <!-- This property is used to specify whether MyBatis Generator should
@@ -42,13 +42,14 @@
         </javaClientGenerator>
 
         <!-- 要生成哪些表 -->
-        <table tableName="t_reconciliation_log" domainObjectName="Reconciliation"
+
+        <table tableName="t_checkin_info" domainObjectName="CheckinInfo"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"></table>
-        <table tableName="t_link_card" domainObjectName="LinkCard"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"></table>
+
+
+
+
     </context>
 </generatorConfiguration>
